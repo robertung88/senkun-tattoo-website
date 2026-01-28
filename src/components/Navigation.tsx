@@ -77,7 +77,7 @@ export default function Navigation() {
               </button>
 
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/senkun.tattoo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#a0a0a0] hover:text-white transition-colors duration-300"

@@ -218,13 +218,13 @@ export default function Contact() {
                   <span className="link-underline">+41 79 123 45 67</span>
                 </a>
                 <a
-                  href="https://instagram.com/senkun"
+                  href="https://instagram.com/senkun.tattoo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-[#a0a0a0] hover:text-white transition-colors"
                 >
                   <Instagram size={20} className="text-[#c9a962]" />
-                  <span className="link-underline">@senkun</span>
+                  <span className="link-underline">@senkun.tattoo</span>
                 </a>
               </div>
             </div>

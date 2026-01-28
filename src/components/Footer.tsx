@@ -96,7 +96,7 @@ export default function Footer() {
             </h4>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com/senkun"
+                href="https://instagram.com/senkun.tattoo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 border border-[#2a2a2a] flex items-center justify-center text-[#a0a0a0] hover:border-white hover:text-white transition-all"
