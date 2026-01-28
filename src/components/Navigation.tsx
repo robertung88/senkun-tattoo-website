@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Instagram } from "lucide-react";
 import { useLanguage } from "./LanguageProvider";
+import Logo from "./Logo";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,13 +42,7 @@ export default function Navigation() {
           <nav className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
             <a href="#" className="relative z-10">
-              <motion.span
-                className="heading-serif text-2xl md:text-3xl tracking-[0.2em] text-white"
-                whileHover={{ opacity: 0.7 }}
-                transition={{ duration: 0.3 }}
-              >
-                SENKUN
-              </motion.span>
+              <Logo />
             </a>
 
             {/* Desktop Navigation */}

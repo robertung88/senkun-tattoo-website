@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import { useLanguage } from "./LanguageProvider";
+import { LogoHero } from "./Logo";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -29,26 +30,22 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6"
+          className="mb-8"
         >
           <span className="text-[#c9a962] text-xs md:text-sm tracking-[0.3em] uppercase">
             {t.hero.subtitle}
           </span>
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="heading-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white mb-8"
-        >
-          SENKUN
-        </motion.h1>
+        {/* Logo with animation */}
+        <div className="mb-10">
+          <LogoHero />
+        </div>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-[#a0a0a0] text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           {t.hero.description}
@@ -57,7 +54,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1, delay: 1, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a href="#work" className="btn-primary w-full sm:w-auto">
@@ -73,7 +70,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
+        transition={{ duration: 1, delay: 1.4 }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2"
       >
         <motion.a
@@ -91,7 +88,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
         className="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2"
       >
         <span className="text-[#a0a0a0] text-xs tracking-[0.3em] uppercase writing-mode-vertical transform rotate-180" style={{ writingMode: "vertical-rl" }}>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "./LanguageProvider";
+import Logo from "./Logo";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -19,9 +20,9 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="heading-serif text-2xl tracking-[0.2em] text-white block mb-4">
-              SENKUN
-            </span>
+            <div className="mb-4">
+              <Logo />
+            </div>
             <p className="text-[#a0a0a0] text-sm leading-relaxed">
               {t.footer.description}
             </p>
