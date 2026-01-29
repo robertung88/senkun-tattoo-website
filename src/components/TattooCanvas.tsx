@@ -4,7 +4,7 @@ import { useEffect, useRef, useCallback } from "react";
 
 export default function TattooCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
   const isCompleteRef = useRef(false);
 
   const initAnimation = useCallback(() => {
