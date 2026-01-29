@@ -1,27 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import { useLanguage } from "./LanguageProvider";
 import { LogoHero } from "./Logo";
+import TattooCanvas from "./TattooCanvas";
 
 export default function Hero() {
   const { t } = useLanguage();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Tattoo Animation */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/work-2-mythological-portrait.jpg"
-          alt="Senkun Tattoo - Mythological portrait sleeve"
-          fill
-          className="object-cover opacity-40"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/50 to-[#0a0a0a]" />
+        <TattooCanvas />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/30 to-[#0a0a0a]" />
       </div>
 
       {/* Content */}
@@ -91,7 +84,10 @@ export default function Hero() {
         transition={{ duration: 1, delay: 1.2 }}
         className="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2"
       >
-        <span className="text-[#a0a0a0] text-xs tracking-[0.3em] uppercase writing-mode-vertical transform rotate-180" style={{ writingMode: "vertical-rl" }}>
+        <span
+          className="text-[#a0a0a0] text-xs tracking-[0.3em] uppercase writing-mode-vertical transform rotate-180"
+          style={{ writingMode: "vertical-rl" }}
+        >
           {t.hero.est}
         </span>
       </motion.div>
