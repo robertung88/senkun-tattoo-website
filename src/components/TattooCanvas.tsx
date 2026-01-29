@@ -187,8 +187,8 @@ export default function TattooCanvas() {
     const handleResize = () => {
       resize();
       // Reload image on resize
-      if (img.complete) {
-        img.onload?.call(img);
+      if (img.complete && img.onload) {
+        img.onload(new Event("load"));
       }
     };
 
